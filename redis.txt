@@ -1,0 +1,12 @@
+template:tibemsd.conf:content
+ 
+config:1:tibemsd.conf:content
+config:1:tibemsd.conf:meta
+
+select 1
+hmset config:1:tibemsd.conf:meta filepath /mnt/tibemsd.conf
+hmset config:1:tibemsd.conf:content MaxMsg 5
+hmset config:1:queues.conf:meta filepath /mnt/queues.conf
+hmset template:tibemsd.conf:content MaxMsg 0
+hmset template:tibemsd.conf:content Timeout 3
+hmset template:tibemsd.conf:meta seperator =
